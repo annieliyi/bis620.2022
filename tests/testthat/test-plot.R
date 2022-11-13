@@ -25,7 +25,7 @@ test_that(
 )
 
 test_that(
-  "The accel_plot() is correct for a data frame with a frequency column but no time column.",
+  "The accel_plot() is correct for a data frame with a frequency column.",
   {
     data(ukb_accel)
     test_freq <- accel_plot(spectral_signature(ukb_accel[1:100, ]))

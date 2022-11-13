@@ -4,7 +4,6 @@
 # bis620.2022
 
 <!-- badges: start -->
-
 [![Codecov test
 coverage](https://codecov.io/gh/annieliyi/bis620.2022/branch/main/graph/badge.svg)](https://app.codecov.io/gh/annieliyi/bis620.2022?branch=main)
 [![R-CMD-check](https://github.com/annieliyi/bis620.2022/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/annieliyi/bis620.2022/actions/workflows/R-CMD-check.yaml)

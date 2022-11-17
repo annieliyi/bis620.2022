@@ -4,6 +4,7 @@
 # bis620.2022
 
 <!-- badges: start -->
+
 [![Codecov test
 coverage](https://codecov.io/gh/annieliyi/bis620.2022/branch/main/graph/badge.svg)](https://app.codecov.io/gh/annieliyi/bis620.2022?branch=main)
 [![R-CMD-check](https://github.com/annieliyi/bis620.2022/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/annieliyi/bis620.2022/actions/workflows/R-CMD-check.yaml)
@@ -11,7 +12,11 @@ coverage](https://codecov.io/gh/annieliyi/bis620.2022/branch/main/graph/badge.sv
 [![lint](https://github.com/annieliyi/bis620.2022/actions/workflows/lint.yaml/badge.svg)](https://github.com/annieliyi/bis620.2022/actions/workflows/lint.yaml)
 <!-- badges: end -->
 
-The goal of bis620.2022 is to …
+The goal of bis620.2022 is to (1) compute spectral signature of
+accelerometry data recorded in three dimensions via Fast Fourier
+Transformation (FFT) and conduct the frequency of time. (2) plot
+accelerometry data recorded in three dimensions with a time for
+frequency column.
 
 ## Installation
 
@@ -30,31 +35,37 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(bis620.2022)
 ## basic example code
+data(ukb_accel)
+##compute spectral signature of the first 100 rows of ukb_accel and conduct frequency from time
+ukb_accel[1:100, ] |>
+      spectral_signature()
+#> # A tibble: 50 × 4
+#>         X     Y       Z  freq
+#>     <dbl> <dbl>   <dbl> <dbl>
+#>  1 19.8   33.7  103.     1.01
+#>  2 26.0    4.23   4.18   1.03
+#>  3  8.14   4.23   9.58   1.05
+#>  4  7.50   3.91   4.86   1.08
+#>  5  1.55   2.74   2.73   1.10
+#>  6  4.32   2.09   0.820  1.12
+#>  7  2.61   2.62   2.85   1.15
+#>  8  3.87   2.88   2.55   1.18
+#>  9  3.63   2.90   0.237  1.20
+#> 10  0.862  2.60   2.82   1.23
+#> # … with 40 more rows
+
+##plot the first 100 rows of ukb_accel to illustrate the movement of object against time
+ukb_accel[1:100, ] |>
+      accel_plot()
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+<img src="man/figures/README-example-1.png" width="100%" />
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+##plot the spectural signature of the first 100 rows of ukb_accel taking logarithm against frequency
+ukb_accel[1:100, ] |>
+      spectral_signature(take_log = TRUE) |>
+      accel_plot()
 ```
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+<img src="man/figures/README-example-2.png" width="100%" />

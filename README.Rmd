@@ -46,9 +46,11 @@ data(ukb_accel)
 ##compute spectral signature of the first 100 rows of ukb_accel and conduct frequency from time
 ukb_accel[1:100, ] |>
       spectral_signature()
+
 ##plot the first 100 rows of ukb_accel to illustrate the movement of object against time
 ukb_accel[1:100, ] |>
       accel_plot()
+
 ##plot the spectural signature of the first 100 rows of ukb_accel taking logarithm against frequency
 ukb_accel[1:100, ] |>
       spectral_signature(take_log = TRUE) |>

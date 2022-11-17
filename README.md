@@ -12,11 +12,14 @@ coverage](https://codecov.io/gh/annieliyi/bis620.2022/branch/main/graph/badge.sv
 [![lint](https://github.com/annieliyi/bis620.2022/actions/workflows/lint.yaml/badge.svg)](https://github.com/annieliyi/bis620.2022/actions/workflows/lint.yaml)
 <!-- badges: end -->
 
-The goal of bis620.2022 is to (1) compute spectral signature of
-accelerometry data recorded in three dimensions via Fast Fourier
-Transformation (FFT) and conduct the frequency of time. (2) plot
-accelerometry data recorded in three dimensions with a time for
-frequency column.
+The goal of bis620.2022 is to
+
+1)  compute spectral signature of accelerometry data recorded in three
+    dimensions via Fast Fourier Transformation (FFT) and conduct the
+    frequency of time.
+
+2)  plot accelerometry data recorded in three dimensions with a time for
+    frequency column.
 
 ## Installation
 

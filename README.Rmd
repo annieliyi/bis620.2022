@@ -26,7 +26,7 @@ The goal of bis620.2022 is to
 
 (1) compute spectral signature of accelerometry data recorded in three dimensions via Fast Fourier Transformation (FFT) and conduct the frequency of time.
 
-(2) plot accelerometry data recorded in three dimensions with a time for frequency column.
+(2) plot accelerometry data recorded in three dimensions with a time or frequency column.
 
 ## Installation
 

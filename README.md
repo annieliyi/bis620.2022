@@ -18,7 +18,7 @@ The goal of bis620.2022 is to
     dimensions via Fast Fourier Transformation (FFT) and conduct the
     frequency of time.
 
-2)  plot accelerometry data recorded in three dimensions with a time for
+2)  plot accelerometry data recorded in three dimensions with a time or
     frequency column.
 
 ## Installation

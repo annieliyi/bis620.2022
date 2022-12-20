@@ -1,5 +1,4 @@
 
-
 #' Get the Spectral Signature of Accelerometry Data
 #'
 #' The spectral signature is calculated by taking the modulus of the
